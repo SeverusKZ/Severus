@@ -1,0 +1,432 @@
+//KEVIN ZAMZAMI
+//19106312500
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	//KEVIN ZAMZAMI
+	//19106312500
+	int pilihan, memilihOperasi, jumlahBaris, jumlahKolom, memasukanBesar,jumlahHitung,matrixHasil[100][100],matrix2[100][100],matrix1[100][100];
+	jumlahHitung = 0;
+	memasukanBesar = 1;
+	cout<<"Selamat datang di Matrix 1.0"<<endl;
+	cout<<"Matrix 1.0 adalah program menghitung operasi matrix"<<endl;
+	cout<<endl;
+	memilihOperasi = 1;
+	
+	while(memilihOperasi == 1){
+	
+		cout<<"Pilih operasi yang kamu ingin lakukan"<<endl;
+		cout<<"1. Penjumlahan"<<endl;
+		cout<<"2. Pengurangan"<<endl;
+		cout<<"3. Perkalian"<<endl;
+		cout<<"=>";
+		
+		//User menginput pilihan operasi matrix
+		cin>>pilihan;
+		
+		//MEMILIH PENJUMLAHAN
+		if(pilihan == 1){
+			system("cls");
+			cout<<"Operasi Penjumlahan dipilih"<<endl;
+			cout<<"Tekan enter untuk melanjutkan!"<<endl;
+			getch();
+			system("cls");
+			
+			//PENJUMLAHAN BERMULAI, MENGINPUT BESAR MATRIX
+			while(memasukanBesar = 1){
+			
+					//MASUKIN KOLOM
+				cout<<"Masukan jumlah baris pada matrix"<<endl;
+				cout<<"==>"; cin>>jumlahBaris;
+				
+					//MASUKIN BARIS
+				cout<<"Masukan jumlah kolom pada matrix "<<endl;
+				cout<<"==>"; cin>>jumlahKolom;
+				if(jumlahBaris > 100 || jumlahKolom > 100)
+				{
+					system("cls");
+					cout<<"Jumlah baris dan kolom tidak bisa lebih dari 100"<<endl;
+					cout<<"Tekan enter untuk melanjutkan";
+					getch();
+					system("cls");
+					continue;
+				}
+				else
+				{
+					system("cls");
+					break;
+				}
+			}
+			cout<<"Matrix anda adalah matrix "<<jumlahBaris<<" x "<<jumlahKolom<<endl;
+			
+			//Memasukan member matrix 1
+			for(int indexBaris = 0; indexBaris < jumlahBaris; indexBaris++)
+			{
+				for(int indexKolom = 0; indexKolom < jumlahKolom; indexKolom++)
+				{
+					cout<<"(MATRIX PERTAMA)Masukan index "<<"("<<indexBaris+1<<","<<indexKolom+1<<")"<<"\t=";
+					cin>>matrix1[indexBaris][indexKolom];
+				}
+			}
+			
+			cout<<"\n";
+			//Memasukan member matrix 2
+			for(int indexBaris = 0; indexBaris < jumlahBaris; indexBaris++)
+			{
+				for(int indexKolom = 0; indexKolom < jumlahKolom; indexKolom++)
+				{
+					cout<<"(MATRIX KEDUA)Masukan index "<<"("<<indexBaris+1<<","<<indexKolom+1<<")"<<"\t=";
+					cin>>matrix2[indexBaris][indexKolom];
+				}
+			}
+			
+			//OUTPUT MATRIX
+				//MATRIX 1
+			cout<<"\nMatrix 1"<<endl;
+			for(int indexBaris = 0; indexBaris < jumlahBaris; indexBaris++)
+			{
+				for(int indexKolom = 0; indexKolom < jumlahKolom; indexKolom++)
+				{
+					
+					cout<<matrix1[indexBaris][indexKolom];
+					cout<<"\t";
+				}
+				cout<<"\n";
+			}
+				//MATRIX 2
+			cout<<"\n\nMatrix 2"<<endl;
+			for(int indexBaris = 0; indexBaris < jumlahBaris; indexBaris++)
+			{
+				for(int indexKolom = 0; indexKolom < jumlahKolom; indexKolom++)
+				{
+					
+					cout<<matrix2[indexBaris][indexKolom];
+					cout<<"\t";
+				}
+				cout<<"\n";
+			}
+			
+			cout<<"\nHasil -->"<<endl;
+			//OUTPUT HASIL
+			for(int indexBaris = 0; indexBaris < jumlahBaris; indexBaris++)
+			{
+				for(int indexKolom = 0; indexKolom < jumlahKolom; indexKolom++)
+				{
+					
+					matrixHasil[indexBaris][indexKolom] = matrix1[indexBaris][indexKolom] + matrix2[indexBaris][indexKolom];
+					
+				}
+
+			}
+			for(int indexBaris = 0; indexBaris < jumlahBaris; indexBaris++)
+			{
+				for(int indexKolom = 0; indexKolom < jumlahKolom; indexKolom++)
+				{
+					
+					cout<<matrixHasil[indexBaris][indexKolom];
+					cout<<"\t";
+				}
+				cout<<"\n";
+			}
+			
+			cout<<"Tekan enter untuk melanjutkan";
+			getch();
+			system("cls");			
+		}
+		
+		//MEMILIH PENGURANGAN
+		else if(pilihan == 2){
+			system("cls");
+			cout<<"Operasi Pengurangan dipilih"<<endl;
+			cout<<"Tekan enter untuk melanjutkan!"<<endl;
+			getch();
+			system("cls");
+			
+			//PENJUMLAHAN BERMULAI, MENGINPUT BESAR MATRIX
+			while(memasukanBesar = 1){
+			
+					//MASUKIN KOLOM
+				cout<<"Masukan jumlah baris pada matrix"<<endl;
+				cout<<"==>"; cin>>jumlahBaris;
+				
+					//MASUKIN BARIS
+				system("cls");
+				cout<<"Masukan jumlah kolom pada matrix"<<endl;
+				cout<<"==>"; cin>>jumlahKolom;
+				if(jumlahBaris > 100 || jumlahKolom > 100)
+				{
+					system("cls");
+					cout<<"Jumlah baris dan kolom tidak bisa lebih dari 100"<<endl;
+					cout<<"Tekan enter untuk melanjutkan";
+					getch();
+					system("cls");
+					continue;
+				}
+				else
+				{
+					system("cls");
+					break;
+				}
+			}
+			//KEVIN ZAMZAMI
+			//19106312500
+			cout<<"Matrix anda adalah matrix "<<jumlahBaris<<" x "<<jumlahKolom<<endl;
+			
+			//Memasukan member matrix 1
+			for(int indexBaris = 0; indexBaris < jumlahBaris; indexBaris++)
+			{
+				for(int indexKolom = 0; indexKolom < jumlahKolom; indexKolom++)
+				{
+					cout<<"(MATRIX PERTAMA)Masukan index "<<"("<<indexBaris+1<<","<<indexKolom+1<<")"<<"\t=";
+					cin>>matrix1[indexBaris][indexKolom];
+				}
+			}
+			
+			cout<<"\n";
+			//Memasukan member matrix 2
+			for(int indexBaris = 0; indexBaris < jumlahBaris; indexBaris++)
+			{
+				for(int indexKolom = 0; indexKolom < jumlahKolom; indexKolom++)
+				{
+					cout<<"(MATRIX KEDUA)Masukan index "<<"("<<indexBaris+1<<","<<indexKolom+1<<")"<<"\t=";
+					cin>>matrix2[indexBaris][indexKolom];
+				}
+			}
+			
+			//OUTPUT MATRIX
+				//MATRIX 1
+			cout<<"\nMatrix 1"<<endl;
+			for(int indexBaris = 0; indexBaris < jumlahBaris; indexBaris++)
+			{
+				for(int indexKolom = 0; indexKolom < jumlahKolom; indexKolom++)
+				{
+					
+					cout<<matrix1[indexBaris][indexKolom];
+					cout<<"\t";
+				}
+				cout<<"\n";
+			}
+				//MATRIX 2
+			cout<<"\n\nMatrix 2"<<endl;
+			for(int indexBaris = 0; indexBaris < jumlahBaris; indexBaris++)
+			{
+				for(int indexKolom = 0; indexKolom < jumlahKolom; indexKolom++)
+				{
+					
+					cout<<matrix2[indexBaris][indexKolom];
+					cout<<"\t";
+				}
+				cout<<"\n";
+			}
+			
+			cout<<"\nHasil -->"<<endl;
+			//OUTPUT HASIL
+			for(int indexBaris = 0; indexBaris < jumlahBaris; indexBaris++)
+			{
+				for(int indexKolom = 0; indexKolom < jumlahKolom; indexKolom++)
+				{
+					
+					matrixHasil[indexBaris][indexKolom] = matrix1[indexBaris][indexKolom] - matrix2[indexBaris][indexKolom];
+					
+				}
+
+			}
+			for(int indexBaris = 0; indexBaris < jumlahBaris; indexBaris++)
+			{
+				for(int indexKolom = 0; indexKolom < jumlahKolom; indexKolom++)
+				{
+					
+					cout<<matrixHasil[indexBaris][indexKolom];
+					cout<<"\t";
+				}
+				cout<<"\n";
+			}
+			
+			cout<<"Tekan enter untuk melanjutkan";
+			getch();
+			system("cls");
+			
+		}
+		
+		//MEMILIH PERKALIAN
+		else if(pilihan == 3){
+			int memasukanBesarM1,memasukanBesarM2,jumlahBaris2,jumlahKolom2;
+			system("cls");
+			cout<<"Operasi Perkalian dipilih"<<endl;
+			cout<<"Tekan enter untuk melanjutkan!"<<endl;
+			getch();
+			system("cls");
+			memasukanBesarM1 = 1;
+			memasukanBesarM2 = 1;
+			//PENJUMLAHAN BERMULAI, MENGINPUT BESAR MATRIX1
+			while (memasukanBesar == 1)
+			{
+				//MENGINPUT BESAR MATRIX 1
+				while(memasukanBesarM1 == 1){
+				
+						//MASUKIN BARIS1
+					cout<<"Masukan jumlah baris pada matrix pertama"<<endl;
+					cout<<"==>"; cin>>jumlahBaris;
+					
+						//MASUKIN KOLOM1
+					cout<<"Masukan jumlah kolom pada matrix pertama"<<endl;
+					cout<<"==>"; cin>>jumlahKolom;
+					if(jumlahBaris > 100 || jumlahKolom > 100)
+					{
+						system("cls");
+						cout<<"Jumlah baris dan kolom tidak bisa lebih dari 100"<<endl;
+						cout<<"Tekan enter untuk melanjutkan";
+						getch();
+						continue;
+					}
+					else
+					{
+						system("cls");
+						break;
+					}
+				}
+				
+				//MENGINPUT BESAR MATRIX 2
+				while(memasukanBesarM2 == 1){
+				
+						//MASUKIN BARIS1
+					cout<<"Masukan jumlah baris pada matrix kedua"<<endl;
+					cout<<"==>"; cin>>jumlahBaris2;
+					
+						//MASUKIN KOLOM1
+					cout<<"Masukan jumlah kolom pada matrix kedua"<<endl;
+					cout<<"==>"; cin>>jumlahKolom2;
+					if(jumlahBaris2 > 100 || jumlahKolom2 > 100)
+					{
+						system("cls");
+						cout<<"Jumlah baris dan kolom tidak bisa lebih dari 100"<<endl;
+						cout<<"Tekan enter untuk melanjutkan";
+						getch();
+						continue;
+					}
+					else
+					{
+						system("cls");
+						break;
+					}
+				}
+				if(jumlahKolom != jumlahBaris2)
+				{
+					system("cls");
+					cout<<"Pada perkalian matrix, Kolom matrix1 dan baris matrix2 harus berjumlah sama"<<endl;
+					cout<<"Tekan enter untuk melanjutkan!";
+					getch();
+					system("cls");
+					continue;
+					
+				}
+				else
+				{
+					break;
+				}
+			}
+			cout<<"Matrix1 anda adalah matrix "<<jumlahBaris<<" x "<<jumlahKolom<<endl;
+			cout<<"Matrix2 anda adalah matrix "<<jumlahBaris2<<" x "<<jumlahKolom2<<endl;
+			getch();
+			//Memasukan member matrix 1
+			for(int indexBaris = 0; indexBaris < jumlahBaris; indexBaris++)
+			{
+				for(int indexKolom = 0; indexKolom < jumlahKolom; indexKolom++)
+				{
+					cout<<"(MATRIX PERTAMA)Masukan index "<<"("<<indexBaris+1<<","<<indexKolom+1<<")"<<"\t=";
+					cin>>matrix1[indexBaris][indexKolom];
+				}
+			}
+			
+			cout<<"\n";
+			//Memasukan member matrix 2
+			for(int indexBaris = 0; indexBaris < jumlahBaris2; indexBaris++)
+			{
+				for(int indexKolom = 0; indexKolom < jumlahKolom2; indexKolom++)
+				{
+					cout<<"(MATRIX KEDUA)Masukan index "<<"("<<indexBaris+1<<","<<indexKolom+1<<")"<<"\t=";
+					cin>>matrix2[indexBaris][indexKolom];
+				}
+			}
+			
+			//OUTPUT MATRIX
+				//MATRIX 1
+			cout<<"\nMatrix 1"<<endl;
+			for(int indexBaris = 0; indexBaris < jumlahBaris; indexBaris++)
+			{
+				for(int indexKolom = 0; indexKolom < jumlahKolom; indexKolom++)
+				{
+					
+					cout<<matrix1[indexBaris][indexKolom];
+					cout<<"\t";
+				}
+				cout<<"\n";
+			}
+				//MATRIX 2
+			cout<<"\n\nMatrix 2"<<endl;
+			for(int indexBaris = 0; indexBaris < jumlahBaris2; indexBaris++)
+			{
+				for(int indexKolom = 0; indexKolom < jumlahKolom2; indexKolom++)
+				{
+					
+					cout<<matrix2[indexBaris][indexKolom];
+					cout<<"\t";
+				}
+				cout<<"\n";
+			}
+			
+			//MENGHITUNG HASIL
+			for(int indexBarisHasil = 0; indexBarisHasil<jumlahBaris;indexBarisHasil++)
+			{
+				for(int indexKolomHasil = 0;indexKolomHasil<jumlahKolom2;indexKolomHasil++)
+				{
+					for(int index = 0;index<jumlahKolom;index++)
+					{
+						
+						jumlahHitung = jumlahHitung + matrix1[indexBarisHasil][index] * matrix2[index][indexKolomHasil];
+					}
+					matrixHasil[indexBarisHasil][indexKolomHasil] = jumlahHitung;
+					jumlahHitung = 0;
+				}
+			
+				
+			}
+			cout<<"\nHasil -->"<<endl;
+			
+			//MENGOUTPUT HASIL
+			for(int indexBarisHasil = 0; indexBarisHasil<jumlahBaris;indexBarisHasil++)
+			{
+				for(int indexKolomHasil = 0; indexKolomHasil<jumlahKolom2;indexKolomHasil++)
+				{
+					cout<<matrixHasil[indexBarisHasil][indexKolomHasil];
+						cout<<"\t";
+				}
+				cout<<"\n";
+			}
+			
+			cout<<"Tekan enter untuk melanjutkan";
+			getch();
+			system("cls");			
+				
+		}
+		
+		//FALSE
+		else{
+			system("cls");
+			cout<<"Pilih-lah operasi sesuai Index!"<<endl;
+			cout<<"Tekan enter untuk melanjutkan!"<<endl;
+			getch();
+			system("cls");
+			continue;
+			
+		}
+	}
+	
+	
+	
+	return 0;
+}
